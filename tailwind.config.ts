@@ -20,10 +20,11 @@ export default {
       'light-secondary': '#72427f'
     },
     screens: {
-      sm: '480px',
-      md: '768px',
+      sm: '200px',
+      md: '869px',
       lg: '976px',
-      xl: '1440px',
+      xl: '1450px',
+      '2xl': '2000px',
     },
     fontFamily: {
       'sans': ['sans-serif', 'system-ui'],

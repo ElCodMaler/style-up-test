@@ -23,13 +23,13 @@ export function Inicio(){
     ]
 
     return (
-        <>
+        <main id='inicio' className="absolute md:w-[80%] sm:w-full">
             <CarruselUsers users={users}/>
-            <section className="relative max-w-screen-md left-1/3">
+            <section className="relative">
                 {posts.map(post => (
                     <Post key={post.user} post={post}/>
                 ))}
             </section>
-        </>
+        </main>
     )
 }

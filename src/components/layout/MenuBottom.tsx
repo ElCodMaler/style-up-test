@@ -3,11 +3,11 @@ import { HiSearch, HiPlus } from "react-icons/hi";
 import { FcVip } from "react-icons/fc";
 import { useState } from "react";
 
-export function Menu(){
+export function MenuBottom(){
     //constantes base
     const [selection, setSelection] = useState('');
-    const sizeBase = "w-[32px] h-[32px]";
-    const sizeLarge = "w-[34px] h-[34px]";
+    const sizeBase = "sm:size-[20px] md:size-[32px]";
+    const sizeLarge = "sm:size-[24px] md:size-[34px]";
     //selectores de estado
     const [sizeHome, setSizeHome] = useState(sizeBase);
     const [sizeChat, setSizeChat] = useState(sizeBase);
@@ -24,15 +24,15 @@ export function Menu(){
     ]
     //construccion del menu
     return (
-        <menu className="md:w-1/5 md:h-screen sm:bottom-0 sm:left-0 sm:z-50 sm:w-full sm:h-16 fixed bg-primary border-r-[0.05px] border-primary-gray">
-            <section className="flex items-center gap-x-4 rounded-md text-sm text-light-gray p-5 mt-8">
-                <FcVip className=" h-16 w-16 sm:h-9 "/>
+        <menu className="fixed bottom-0 z-50 w-full h-12 bg-primary border-r-[0.05px] border-primary-gray">
+            {/*<section className="grid h-full m-4 max-w-lg grid-cols-3 rounded-md text-sm text-light-gray p-5 mt-8">
+                <FcVip className="size-16 sm:h-9 "/>
                 <samp className="self-center text-xl font-semibold ">Style Up</samp>
-            </section>
+            </section>*/}
             
-            <ol>
+            <ol className="grid h-full w-full grid-cols-5 mx-auto bg-light-secondary">
                 {menus.map((menu) => (
-                    <li key={menu.title} className="flex items-center hover:bg-light-primary rounded-md cursor-pointer text-light-gray hover:text-secondary h-14 m-4 pl-3"
+                    <li key={menu.title} className="inline-flex flex-col items-center justify-center px-0 hover:bg-light-primary rounded-md cursor-pointer text-light-gray hover:text-secondary"
                     onPointerMove={() => {
                         if (menu.title === "Home") {
                             setSizeHome(sizeLarge);
@@ -64,9 +64,7 @@ export function Menu(){
                         <span className="absolute">
                             {menu.icon}
                         </span>
-                        <span className={`text-lg ml-12 select-none ${menu.title === selection ? "font-bold" : "font-sans"}`}>
-                            {menu.title}
-                        </span>
+                        
                     </li>
                 ))}
             </ol>

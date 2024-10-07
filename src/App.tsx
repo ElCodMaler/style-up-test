@@ -1,11 +1,11 @@
-import { Menu } from './components/layout/Menu'
+//import { Menu } from './components/layout'
 import { Inicio } from './pages/Inicio';
-import { MyNavBar } from './components/ui/MyNavBar';
+import { MenuBottom } from './components/ui';
 
 export default function App() {
   return (
-    <main>
-      <Menu />
+    <main className='bg-primary'>
+      <MenuBottom />
       <Inicio />
     </main>
   );

@@ -14,7 +14,7 @@ interface Post{
 
 export const Post: React.FC<{post: Post}> = ({ post }) => {
 
-    const classPostButtons = 'w-10 h-8 hover:text-light-gray';
+    const classPostButtons = 'size-9 hover:text-light-gray';
 
     const [meGusta, setMegusta] = useState(false);
     const [comenta, setComenta] = useState(false);
@@ -22,14 +22,14 @@ export const Post: React.FC<{post: Post}> = ({ post }) => {
     const [carrito, setCarrito] = useState(false);
 
   return (
-    <div className="relative max-w-lg bg-secondary rounded-2xl shadow text-new-white mb-32 mx-auto">
+    <div className="relative md:max-w-lg sm:w-2/3 bg-secondary rounded-2xl shadow text-new-white md:mb-32 sm:mb-16 mx-auto">
         <img className="rounded-t-2xl object-cover w-full" src={post.image} alt="imagen 1" />
-        <a href="#" className="absolute top-0 left-0 right-0 bottom-auto flex items-center text-secondary mt-10 ml-8 hover:text-light-secondary">
-            <IoPersonCircle className="w-10 h-8"/>
-            <span className="justify-between mb-0">{post.user}</span>
+        <a href="#" className="absolute top-0 left-0 right-0 font-[10px] bottom-auto flex items-center text-secondary md:mt-10 md:ml-8 sm:mt-6 sm:ml-4 hover:text-light-secondary">
+            <IoPersonCircle className="sm:size-7 md:size-10"/>
+            <span className="md:justify-between sm:justify-start mb-0">{post.user}</span>
         </a>
         <section className="flex justify-between items-center gap-3 p-4">
-            <p className="font-sans text-lg">
+            <p className="font-sans md:text-lg sm:text-[10px]">
                 {post.text}
             </p>
             {meGusta ? <IoHeartSharp className={classPostButtons} onClick={() => setMegusta(false)}/> : <IoHeartOutline className={classPostButtons} onClick={() => setMegusta(true)}/>}
