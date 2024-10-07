@@ -1,31 +1,6 @@
-import { RiHome3Fill, RiChatNewFill, RiUser3Fill } from "react-icons/ri";
-import { HiSearch, HiPlus } from "react-icons/hi";
-import { FcVip } from "react-icons/fc";
-import { useState } from "react";
-
 export function MenuBottom(){
-    //constantes base
-    const [selection, setSelection] = useState('');
-    const sizeBase = "sm:size-[20px] md:size-[32px]";
-    const sizeLarge = "sm:size-[24px] md:size-[34px]";
-    //selectores de estado
-    const [sizeHome, setSizeHome] = useState(sizeBase);
-    const [sizeChat, setSizeChat] = useState(sizeBase);
-    const [sizeUser, setSizeUser] = useState(sizeBase);
-    const [sizeSearch, setSizeSearch] = useState(sizeBase);
-    const [sizePlus, setSizePlus] = useState(sizeBase);
-    //valores del menu
-    const menus = [
-        { title: "Home", icon: <RiHome3Fill className={sizeHome}/> },
-        { title: "Chat", icon: <RiChatNewFill className={sizeChat}/> },
-        { title: "Add", icon: <HiPlus className={sizePlus}/> },
-        { title: "Search", icon: <HiSearch className={sizeSearch}/> },
-        { title: "User", icon: <RiUser3Fill className={sizeUser}/> },
-    ]
     //construccion del menu
     return (
-        
-
 <div className="fixed bottom-0 left-0 z-50 w-full h-16 bg-white border-t border-gray-200 dark:bg-gray-700 dark:border-gray-600">
     <div className="grid h-full max-w-lg grid-cols-4 mx-auto font-medium">
         <button type="button" className="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group">

@@ -1,11 +1,8 @@
 import { RiHome3Fill, RiChatNewFill, RiUser3Fill } from "react-icons/ri";
 import { HiSearch, HiPlus } from "react-icons/hi";
-import { FcVip } from "react-icons/fc";
 import { useState } from "react";
 
 export function MenuBottom(){
-    //constantes base
-    const [selection, setSelection] = useState('');
     const sizeBase = "sm:size-[20px] md:size-[32px]";
     const sizeLarge = "sm:size-[24px] md:size-[34px]";
     //selectores de estado
@@ -59,7 +56,6 @@ export function MenuBottom(){
                             setSizeSearch(sizeBase);
                         }
                     }}
-                    onClick={() => setSelection(menu.title)}
                     >
                         <span className="absolute">
                             {menu.icon}
