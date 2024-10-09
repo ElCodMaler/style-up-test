@@ -7,7 +7,7 @@ interface User{
 
 export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
     return(
-        <section className="flex mx-auto sm:overflow-x-auto sm:space-x-1 sm:py-1 sm:gap-x-1 sm:transition-transform sm:duration-500 sm:w-[90%] sm:my-5  md:w-[85%] md:p-2 md:mb-4">
+        <section className="flex mx-auto sm:overflow-x-auto sm:space-x-1 sm:py-1 sm:gap-x-3 sm:transition-transform sm:duration-500 sm:w-[90%] sm:my-5  md:w-[85%] md:p-2 md:mb-4">
             {/** Contenedor del icono tu historia */}
             <div className="relative text-sm top-0 p-0 md:mr-1 cursor-pointe">
                 <div className="md:size-20 sm:size-16 rounded-full bg-new-white flex justify-center items-center">
