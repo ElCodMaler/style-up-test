@@ -6,7 +6,7 @@ import autoprefixer from 'autoprefixer';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: "https://ElCodMaler.github.io/style-up-test",
+  base: "https://ElCodMaler.github.io/style-up-test/",
   css: {
     postcss: {
       plugins: [
