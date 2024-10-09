@@ -6,8 +6,8 @@ import { useState } from "react";
 export function Menu(){
     //constantes base
     const [selection, setSelection] = useState('');
-    const sizeBase = "sm:size-[20px] md:size-[32px]";
-    const sizeLarge = "sm:size-[24px] md:size-[36px]";
+    const sizeBase = "sm:size-[28px] md:size-[32px]";
+    const sizeLarge = "md:size-[36px]";
     //selectores de estado
     const [sizeHome, setSizeHome] = useState(sizeBase);
     const [sizeChat, setSizeChat] = useState(sizeBase);
@@ -25,7 +25,7 @@ export function Menu(){
     //construccion del menu
     return (
         <menu className="fixed md:z-0 md:w-1/5 md:h-screen md:border-r-[0.05px] sm:bottom-0 sm:left-0 sm:right-0 sm:z-50 sm:w-full sm:h-12 sm:border-t-[0.05px] bg-primary border-r-[0.05px] border-primary-gray">
-            {}
+            
             <section className="flex items-center gap-x-4 rounded-md text-sm text-light-gray p-5 mt-8 sm:hidden md:block">
                 <FcVip className="size-16 sm:h-9 "/>
                 <samp className="self-center text-xl font-semibold ">Style Up</samp>
@@ -33,7 +33,7 @@ export function Menu(){
             
             <ol className="sm:grid md:inline-block md:mb-3 sm:h-full sm:w-full sm:grid-cols-5 sm:mx-auto">
                 {menus.map((menu) => (
-                    <li key={menu.title} className="justify-center items-center md:rounded-xl md:flex md:gap-6 md:h-20 md:mb-5 ms:m-2 sm:inline-flex sm:flex-col hover:bg-light-primary cursor-pointer text-light-gray hover:text-secondary"
+                    <li key={menu.title} className="justify-center items-center md:rounded-xl md:flex md:gap-6 md:h-20 md:mb-5 ms:m-2 sm:inline-flex sm:flex-col md:hover:bg-light-primary cursor-pointer text-light-gray hover:text-secondary"
                     onPointerMove={() => {
                         if (menu.title === "Home") {
                             setSizeHome(sizeLarge);
@@ -62,7 +62,7 @@ export function Menu(){
                     }}
                     onClick={() => setSelection(menu.title)}
                     >
-                        <span className="absolute md:mr-36">
+                        <span className={`absolute md:mr-36 sm:${menu.title === selection ? "size-[30px]" : sizeBase}`}>
                             {menu.icon}
                         </span>
                         <span className={`md:block sm:hidden md:text-lg md:pl-10 select-none ${menu.title === selection ? "font-bold" : "font-sans"}`}>
