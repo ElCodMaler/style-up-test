@@ -24,7 +24,7 @@ export function Menu(){
     ]
     //construccion del menu
     return (
-        <menu className="fixed md:z-0 md:w-1/5 md:h-screen md:border-r-[0.05px] sm:bottom-0 sm:left-0 sm:z-50 sm:w-full sm:h-12 sm:border-t-[0.05px] bg-primary border-r-[0.05px] border-primary-gray">
+        <menu className="fixed md:z-0 md:w-1/5 md:h-screen md:border-r-[0.05px] sm:bottom-0 sm:left-0 sm:right-0 sm:z-50 sm:w-full sm:h-12 sm:border-t-[0.05px] bg-primary border-r-[0.05px] border-primary-gray">
             {}
             <section className="flex items-center gap-x-4 rounded-md text-sm text-light-gray p-5 mt-8 sm:hidden md:block">
                 <FcVip className="size-16 sm:h-9 "/>

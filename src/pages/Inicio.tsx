@@ -37,8 +37,9 @@ export function Inicio(){
     ]
 
     return (
-        <main id='inicio' className="md:w-[80%] md:ml-[20%] sm:w-full">
+        <main id='inicio' className="md:w-[80%] md:ml-[20%] sm:flex-grow">
             <CarruselUsers users={users}/>
+            {/** */}
             <section className="relative">
                 {posts.map(post => (
                     <Post key={post.user} post={post}/>

@@ -4,7 +4,7 @@ import './styles/output.css'
 
 export default function App() {
   return (
-    <main className='bg-primary'>
+    <main className="flex sm:flex-col">
       <Menu />
       <Inicio />
     </main>
