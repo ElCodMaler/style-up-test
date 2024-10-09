@@ -3,17 +3,17 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://ElCodMaler.github.io/style-up-test/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "tail": "npx tailwindcss -i ./src/styles/index.css -o ./src/styles/output.css --watch"
   },
   "dependencies": {
-    "@heroicons/react": "^2.1.5",
-    "@mui/icons-material": "^6.1.2",
-    "flowbite": "^2.5.2",
     "flowbite-react": "^0.10.2",
     "gh-pages": "^6.1.1",
     "react": "^18.3.1",
