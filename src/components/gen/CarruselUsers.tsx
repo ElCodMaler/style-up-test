@@ -38,7 +38,6 @@ export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
                         alt="Bordered avatar"
                         />
                     </div>
-                    
                     <p className="text-light-gray md:text-[13px] sm:text-[10px] text-center">{user.name}</p>
                 </div>
             ))}
