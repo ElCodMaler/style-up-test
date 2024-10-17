@@ -35,7 +35,7 @@ export function Inicio(){
     ]
 
     return (
-        <main id='inicio' className="md:w-[80%] md:ml-[20%] sm:flex-grow">
+        <>
             {/**Carrusel de usuarios */}
             <CarruselUsers users={users}/>
             {/**seccion de Post de ropa */}
@@ -44,6 +44,6 @@ export function Inicio(){
                     <Post key={post.user} post={post}/>
                 ))}
             </section>
-        </main>
+        </>
     )
 }

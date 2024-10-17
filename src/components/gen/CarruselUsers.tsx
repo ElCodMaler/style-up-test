@@ -14,8 +14,8 @@ export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
                     <HiUser className="md:size-16 sm:size-11 rounded-full text-secondary"/>
                 </div>
                 <svg fill="#632374" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" href="http://www.serif.com/" className="md:bottom-6 md:left-14 absolute md:size-5 text-secondary sm:bottom-5 sm:left-11 sm:size-5">
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="3.84">
+                    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+                    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" stroke="#CCCCCC" strokeWidth="3.84">
                         <path d="M14.5,14.501l-10.502,0c-0.828,0 -1.5,0.673 -1.5,1.5c0,0.828 0.672,1.5 1.5,1.5l10.502,0l-0.001,10.502c0,0.828 0.672,1.5 1.5,1.501c0.828,-0 1.5,-0.673 1.5,-1.5l0.001,-10.503l10.502,0c0.828,0 1.5,-0.672 1.5,-1.5c0,-0.827 -0.672,-1.5 -1.5,-1.5l-10.502,0l0.001,-10.501c-0,-0.828 -0.672,-1.501 -1.5,-1.501c-0.828,0 -1.5,0.672 -1.5,1.5l-0.001,10.502Z">
                         </path>
                         <g id="Icon"></g>
@@ -28,9 +28,9 @@ export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
                 </svg>
                 <p className="text-light-gray md:text-sm sm:text-[10px] text-center">tu historia</p>
             </div>
-            {/** Contenedor de los iconos de las historias de otros usuarios */}
+            {/** Contenedor de los iconos de las historias de la lista de usuarios */}
             {users.map(user => (
-                <div className="text-sm md:grid md:px-1 cursor-pointer">
+                <div key={user.name} className="text-sm md:grid md:px-1 cursor-pointer">
                     <div className="sm:size-16 sm:ring-[2.6px] sm:p-[2px] md:size-20 md:p-1 md:ring-[3px] rounded-full ring-secondary cursor-pointer">
                         <img 
                         className="size-full rounded-full object-cover"
