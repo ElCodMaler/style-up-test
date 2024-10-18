@@ -60,7 +60,7 @@ export function Login(){
             <button 
              type="button" 
              onClick={handleClick}
-             className="my-8 font-medium rounded-lg text-sm md:w-auto md:px-12 sm:w-full py-2.5 text-primary bg-new-white hover:bg-white focus:ring-2 focus:ring-light-secondary active:text-light-secondary">
+             className="my-8 font-medium rounded-lg md:text-sm md:w-auto md:px-12 sm:text-lg sm:w-full sm:py-3 md:py-2.5 text-primary bg-new-white hover:bg-white focus:ring-2 focus:ring-light-secondary active:text-light-secondary">
                 Ingresar
             </button>
         </div>

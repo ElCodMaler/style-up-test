@@ -32,7 +32,7 @@ export const Post: React.FC<{post: Post}> = ({ post }) => {
             </a>
             {/**Contenedor de comentarios y otras opciones */}
             <section className="flex justify-between items-center md:gap-3 md:p-4 sm:gap-2 sm:p-2">
-                <p className="font-sans md:text-lg sm:text-[10px]">
+                <p className="font-sans md:text-lg sm:text-sm">
                     {post.text}
                 </p>
                 {/**iconos del post */}

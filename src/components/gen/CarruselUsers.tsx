@@ -7,7 +7,7 @@ interface User{
 
 export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
     return(
-        <section className="flex mx-auto sm:overflow-x-auto sm:space-x-1 sm:py-1 sm:gap-x-3 sm:transition-transform sm:duration-500 sm:w-[90%] sm:my-5  md:w-[85%] md:p-2 md:mb-4">
+        <section className="flex mx-auto sm:overflow-x-auto sm:space-x-1 sm:py-1 sm:gap-x-1 sm:transition-transform sm:duration-500 sm:w-[90%] sm:my-5  md:w-[85%] md:p-2 md:mb-4">
             {/** Contenedor del icono tu historia */}
             <div className="relative text-sm top-0 p-0 md:mr-1 cursor-pointe">
                 <div className="md:size-20 sm:size-16 rounded-full bg-new-white flex justify-center items-center">
@@ -26,19 +26,19 @@ export const CarruselUsers: React.FC<{users: User[]}> = ({ users }) => {
                         <g id="Icon"></g>
                     </g>
                 </svg>
-                <p className="text-light-gray md:text-sm sm:text-[10px] text-center">tu historia</p>
+                <p className="text-light-gray md:text-sm sm:text-sm sm:mt-[2px] text-center">tu historia</p>
             </div>
             {/** Contenedor de los iconos de las historias de la lista de usuarios */}
             {users.map(user => (
                 <div key={user.name} className="text-sm md:grid md:px-1 cursor-pointer">
-                    <div className="sm:size-16 sm:ring-[2.6px] sm:p-[2px] md:size-20 md:p-1 md:ring-[3px] rounded-full ring-secondary cursor-pointer">
+                    <div className="sm:size-16 sm:ml-2 sm:mb-1 sm:ring-[2.6px] sm:p-[2px] md:size-20 md:p-1 md:ring-[3px] rounded-full ring-secondary cursor-pointer">
                         <img 
                         className="size-full rounded-full object-cover"
                         src={user.image} 
                         alt="Bordered avatar"
                         />
                     </div>
-                    <p className="text-light-gray md:text-[13px] sm:text-[10px] text-center">{user.name}</p>
+                    <p className="text-light-gray md:text-xs sm:text-xs text-center">{user.name}</p>
                 </div>
             ))}
         </section>

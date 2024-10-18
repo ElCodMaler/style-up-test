@@ -23,7 +23,7 @@ export const CardSelector: React.FC<{clothes: Clothes}> = ({clothes}) => {
             </div>
             {/**Titulo del boton */}
             <section className="grid md:pb-12 md:pt-3 h-[200px] rounded-b-2xl justify-center items-center sm:h-9 md:h-6 bg-secondary">
-                <span className="font-sans text-center md:text-lg sm:text-[15px]">{clothes.type}</span>
+                <span className="font-sans text-center md:text-lg sm:text-lg">{clothes.type}</span>
             </section>
         </button>
     );

@@ -20,7 +20,7 @@ export function ConfirmPost({image}: {image: string}){
             {/** guardar post en galeria */}
             <a href="#" className={`sm:m-4 lg:m-11 text-light-secondary hover:text-light-gray`}>Guardar borrador</a>
             {/** publicar post */}
-            <button type="submit" className={`sm:text-base sm:px-4 sm:py-2 sm:rounded-lg lg:text-xl lg:px-6 lg:py-3 lg:rounded-2xl bg-secondary text-light-gray hover:bg-light-secondary`} 
+            <button type="submit" className='sm:text-lg px-6 py-3 sm:rounded-lg lg:text-xl lg:rounded-2xl bg-secondary text-light-gray hover:bg-light-secondary'
              onClick={() => handleClick()}
             >
                 Publicar
