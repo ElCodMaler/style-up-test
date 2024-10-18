@@ -5,7 +5,7 @@ import { Reenvio } from "../components/form/Reenvio";
 
 export function Login(){
     //variables globales del programa
-    const { setUser, setIsAuthenticated, user } = useContext(AuthContext);
+    const { setUser, setIsAuthenticated } = useContext(AuthContext);
     // variable de estado
     const [inputVal, setInputVal] = useState({
         email: '',
@@ -24,7 +24,7 @@ export function Login(){
     // funcion peticion a la base de datos
     const handleClick = () => {
         //peticion a la base de datos
-        setUser({
+        const data = {
             id: 1425,
             first_name: 'Gilberto',
             last_name: 'Ojeda',
@@ -34,8 +34,16 @@ export function Login(){
             picture: '',
             password: '123',
             date_create: '16-10-2024',
-        })
-        if(inputVal.email === user.email) setIsAuthenticated(true);
+        };
+        //validacion de datos
+        if(inputVal.email === data.email && inputVal.password === data.password){
+            setUser(data);
+            setIsAuthenticated(true);
+        }else if(inputVal.email.length > 0 && inputVal.email != data.email){
+            alert('email incorrecto!');
+        } else if(inputVal.password.length > 0 && inputVal.password != data.password){
+            alert('contraseña incorrecta!');
+        }
     }
     
     return (

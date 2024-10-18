@@ -1,5 +1,5 @@
 import React from 'react'
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { usuario } from '../types/usuario';
 
 // las variables globales de la app
@@ -29,6 +29,8 @@ const AuthProvider:React.FC<{children: React.ReactNode}> = ({ children }) => {
         password: '',
         date_create: '',
     });
+    // navegacion
+    const navigate = useNavigate();
 
     // funcion para asignar el email
     function setEmail(email: string){
@@ -52,12 +54,12 @@ const AuthProvider:React.FC<{children: React.ReactNode}> = ({ children }) => {
             );
         // si ya esta autneticado entonces se envia automaticamente a la ruta del home
         } else if (isAuthenticated === true && user.email !== ''){
-            redirect('/home');
+            navigate('/home');
             //guardamos los valores en el local storage
             return localStorage.setItem('authState', JSON.stringify({ isAuthenticated, user })); 
         }
         // si no esta logeado entonces se quedara en la ruta login
-        return redirect('/login');
+        return navigate('/login');
     };
 
   return (

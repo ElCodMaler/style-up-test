@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { AuthContext } from "../auth/AuthProvider";
 import { Layouts } from "../pages/Layouts";
 //Paginas
-import { SendPost, Inicio, Login, TypePost } from "../pages";
+import { SendPost, Inicio, Login, TypePost, MyUser } from "../pages";
 // imagenes de ropa genericos
 import imgFranela from '../assets/franela.jpeg'
 import imgJogger from '../assets/joggers.jpeg'
@@ -25,6 +25,7 @@ export default function Router(){
     //evaluacion del estado de la cuenta
     useEffect(() => {  
         authState();
+        console.log(isAuthenticated);
     }, [isAuthenticated]);
 
     //construccion de las rutas
@@ -35,13 +36,14 @@ export default function Router(){
                 (/**Si esta logeado puede acceder a las rutas de la app */
                 <Route element={<Layouts />}>
                     <Route path="/home" element={<Inicio />} />
+                    <Route path="/user" element={<MyUser />} />
                     <Route path="/add" element={<TypePost clothes={clothes}/>} />
                     <Route path="/add/:IdPrenda" element={<SendPost clothes={clothes}/>} />
                     <Route path="/*" element={<p className="text-light-gray font-bold text-5xl text-center mt-11">Not found</p>}/>
                 </Route>)
                     :
                 (/**si no esta logeado solo puede acceder a la ruta del login */
-                <Route path="login" element={<Login />} />)}
+                <Route path="/login" element={<Login />} />)}
         </Routes>
     );
 }
