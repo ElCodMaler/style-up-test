@@ -1,5 +1,5 @@
 # Style Up 
-Un E-commers de ropa con un diseño personalizado, con autenticacion de usuario
+Un E-commerce de ropa con un diseño personalizado, con autenticacion de usuario
 
 ## Tecnologías
 
@@ -16,5 +16,20 @@ Se necesita tener instalado [node](https://nodejs.org/en/about) luego instalar e
 proyecto, clonarlo, como prfiera... dentro del proyecto usar el siguente comando:
 
 ```bash
-  npm init
+  npm install
 ```
+luego corra el programa:
+
+```bash
+  npm run dev
+```
+
+## Sobre el app
+Al iniciar el programa necesitas usar un correo y contraseña:
+
+email:
+`test@hotmail.com`
+
+password:
+`123`
+

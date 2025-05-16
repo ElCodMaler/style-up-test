@@ -26,10 +26,10 @@ export function Login(){
         //peticion a la base de datos
         const data = {
             id: 1425,
-            first_name: 'Gilberto',
-            last_name: 'Ojeda',
-            phone: 4144567782,
-            email: 'gilbertojeda30@gmail.com',
+            first_name: 'Leo',
+            last_name: 'Olivares',
+            phone: 4147526691,
+            email: 'test@hotmail.com',
             date_birth: '28-12-2000',
             picture: '',
             password: '123',
