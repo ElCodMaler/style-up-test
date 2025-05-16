@@ -27,9 +27,9 @@ luego corra el programa:
 ## Sobre el app
 Al iniciar el programa necesitas usar un correo y contraseña:
 
-email:
+- email:
 `test@hotmail.com`
 
-password:
+- password:
 `123`
 
