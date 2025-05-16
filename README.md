@@ -10,3 +10,11 @@ Un E-commers de ropa con un diseño personalizado, con autenticacion de usuario
 </p>
 
 Este proyecto utiliza Vite, TypeScript y Tailwind CSS.
+
+## Inicio rapido
+Se necesita tener instalado [node](https://nodejs.org/en/about) luego instalar el
+proyecto, clonarlo, como prfiera... dentro del proyecto usar el siguente comando:
+
+´´´bash
+  npm init
+´´´
